@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>News App</title>
+        <link rel="stylesheet" href="style.css" />
+        
+    </head>
+    <body>
+        <nav>
+            <div class="main-nav container flex">
+                <a href="#" onclick="reload()" class="company-logo">
+                    <img src="assets\CBS-News.png" alt="company logo" class="logo"  />
+                </a>
+                <div class="menu-items"> 
+                    <div class="nav-links">
+                        <ul class="flex">
+                            <li
+                                class="hover-link nav-item"
+                                id="ipl"
+                                onclick="onNavItemClick('ipl')">
+                                IPL
+                            </li>
+                            <li
+                                class="hover-link nav-item"
+                                id="finance"
+                                onclick="onNavItemClick('finance')">
+                                Finance
+                            </li>
+                            <li
+                                class="hover-link nav-item"
+                                id="politics"
+                                onclick="onNavItemClick('politics')">
+                                Politics
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-bar flex">
+                        <input
+                            id="search-text"
+                            type="text"
+                            class="news-input"
+                            placeholder="e.g. Science" />
+                        <button id="search-button" class="search-button">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <div class="container flex">
+                
+                <div class="headline">
+                    
+                    <div class="card">
+                        
+                        <div class="card-header">
+                            <img
+                                id="main-image"
+                                src="./img.jpeg"
+                                alt="Headline Image" />
+                        </div>
+                        <div class="card-content">
+                            <h2 id="main-headline">Headline News</h2>
+                            <p id="main-content">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Sed ut perspiciatis unde omnis
+                                iste natus error sit voluptatem accusantium
+                                doloremque laudantium.
+                            </p>
+                            <p id="main-source" class="news-source">
+                                Source: Example News
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="recommended-news">
+                   
+                    <div class="cards-container" id="cards-container">
+                       
+                    </div>
+                </div>
+            </div>
+        </main>
+
+       
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-content">
+                    <span class="news-source" id="news-source">
+                        End Gadget 26/08/2023
+                    </span>
+                    <p id="news-title" class="news-title">This is the Title</p>
+                  
+                </div>
+
+                <div class="card-header">
+                    <img
+                        src="https://via.placeholder.com/400x200"
+                        alt="news-image"
+                        id="news-img" />
+                </div>
+            </div>
+        </template>
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
+
